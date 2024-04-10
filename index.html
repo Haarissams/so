@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mine</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: coral;
+  }
+
+  #countdown {
+    font-size: 36px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<div id="countdown"></div>
+
+<script>
+function countdown() {
+  var count = 10;
+  var countdownElement = document.getElementById("countdown");
+
+  var timer = setInterval(function() {
+    countdownElement.innerHTML = count;
+    count--;
+
+    if (count < 0) {
+      clearInterval(timer);
+      countdownElement.innerHTML = "I love You Sowmiya Papa !!!";
+    }
+  }, 1000);
+}
+
+window.onload = countdown;
+</script>
+
+</body>
+</html>
